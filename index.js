@@ -2,14 +2,14 @@ let userId;
 let username;
 let money;
 
-window.onload = async function () {
+/*window.onload = async function () {
     //await getData();
     /*if (userId && username && money !== undefined) {
         showHome(username, money);
-    } else {*/
+    } else {
         showStart();
    // }
-};
+};*/
 
 async function getData() {
     userId = localStorage.getItem('userId');  // Get the userId from localStorage
