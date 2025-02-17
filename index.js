@@ -17,7 +17,7 @@ async function getData() {
 
     if (userId) {
         try {
-            const response = await fetch(`http://localhost:3000/user/${userId}`);
+            const response = await fetch(`https://milionar-backend.onrender.com/user/${userId}`);
             if (response.ok) {
                 const userData = await response.json();
                 console.log('Fetched user data:', userData); // Log the user data
@@ -98,7 +98,7 @@ async function login() {
     const password = document.getElementById('login-password').value;
     
     try {
-        const res = await fetch('http://localhost:3000/login', {
+        const res = await fetch('https://milionar-backend.onrender.com/login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
@@ -126,7 +126,7 @@ async function signup() {
     const password = document.getElementById('signup-password').value;
     
     try {
-        const res = await fetch('http://localhost:3000/register', {
+        const res = await fetch('https://milionar-backend.onrender.com/register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username, email, password })
@@ -144,7 +144,7 @@ async function signup() {
 
 async function fetchQuestion() {
     try {
-        const res = await fetch('http://localhost:3000/question');
+        const res = await fetch('https://milionar-backend.onrender.com/question');
         
         if (!res.ok) {
             throw new Error('Failed to fetch question');
@@ -195,7 +195,7 @@ async function updateMoney(amount) {
         money = money+ amount;
         localStorage.setItem('money', money);
         userId = localStorage.getItem('userId');
-        const res = await fetch('http://localhost:3000/update-money', {
+        const res = await fetch('https://milionar-backend.onrender.com/update-money', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId: userId, amount })
