@@ -10,6 +10,10 @@ let money;
         showStart();
    // }
 };*/
+window.onload = function()
+{
+    showStart();
+}
 
 async function getData() {
     userId = localStorage.getItem('userId');  // Get the userId from localStorage
