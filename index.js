@@ -4,11 +4,11 @@ let money;
 
 window.onload = async function () {
     //await getData();
-    if (userId && username && money !== undefined) {
+    /*if (userId && username && money !== undefined) {
         showHome(username, money);
-    } else {
+    } else {*/
         showStart();
-    }
+   // }
 };
 
 async function getData() {
