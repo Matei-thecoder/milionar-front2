@@ -10,9 +10,9 @@ let money;
         showStart();
    // }
 };*/
-window.onload = function()
+window.onload = async function()
 {
-    showStart();
+    await showStart();
 }
 
 async function getData() {
