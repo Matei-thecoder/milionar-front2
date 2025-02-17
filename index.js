@@ -3,7 +3,7 @@ let username;
 let money;
 
 window.onload = async function () {
-    await getData();
+    //await getData();
     if (userId && username && money !== undefined) {
         showHome(username, money);
     } else {
