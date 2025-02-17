@@ -177,7 +177,7 @@ async function fetchQuestion() {
                     resultContainer.style.color = 'green';
                     updateMoney(100);
                 } else {
-                    resultContainer.innerHTML = 'Incorrect! 😞';
+                    resultContainer.innerHTML = `Incorrect! 😞</br> The correct answer was:</br> ${data.answer}.`;
                     resultContainer.style.color = 'red';
                     updateMoney(-50);
                 }

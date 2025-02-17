@@ -14,7 +14,7 @@
             <button onclick="showSignup()">Signup</button>
         </div>
 
-        <div id="login-menu" class="menu hidden">
+        <div id="login-menu" class="menu hidden auth-container">
             <h2>Login</h2>
             <input type="email" id="login-email" placeholder="Email">
             <input type="password" id="login-password" placeholder="Password">
@@ -22,7 +22,7 @@
             <button onclick="showStart()">Back</button>
         </div>
 
-        <div id="signup-menu" class="menu hidden">
+        <div id="signup-menu" class="menu hidden auth-container">
             <h2>Signup</h2>
             <input type="text" id="signup-username" placeholder="Username">
             <input type="email" id="signup-email" placeholder="Email">
@@ -35,21 +35,20 @@
             <h2>Welcome, <span id="username"></span></h2>
             <p>Money: $<span id="money"></span></p>
             <button onclick="startGame()">Start Game</button>
-            <button onclick="logout()">Logout</button>
+            <button onclick="logout()" class="logout">Logout</button>
         </div>
 
         <div id="game-menu" class="menu hidden">
             <h2>Question</h2>
             <p id="question-text"></p>
             <div id="options"></div>
-            
-            <!-- Result Container for success or failure feedback -->
             <div id="result-container" style="margin-top: 20px; font-weight: bold; font-size: 18px;"></div>
-
             <button onclick="fetchQuestion()">Next Question</button>
             <button onclick="showHome()">Back</button>
         </div>
     </div>
+
+   
 
     <script src="script.js"></script>
 </body>
